@@ -1,0 +1,32 @@
+---
+title: "Tidyverse tips and tricks"
+output:
+  html_document:
+    keep_md: true
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
+
+
+<div id="packages-required" class="section level1">
+<h1>Packages Required</h1>
+<pre class="r"><code># install.packages(&quot;tidyverse&quot;)
+library(tidyverse)
+library(lubridate)
+
+data(&quot;chickwts&quot;)</code></pre>
+</div>
+<div id="tip-1-of-18-create-new-columns-in-a-count-or-group_by" class="section level1">
+<h1>Tip 1 of 18: Create new columns in a count or group_by</h1>
+<pre class="r"><code>chickwts%&gt;%
+  count(feed)</code></pre>
+<pre><code>##        feed  n
+## 1    casein 12
+## 2 horsebean 10
+## 3   linseed 12
+## 4  meatmeal 11
+## 5   soybean 14
+## 6 sunflower 12</code></pre>
+</div>

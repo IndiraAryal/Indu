@@ -1,0 +1,35 @@
+---
+title: "Tidyverse tips and tricks"
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+# Packages Required
+```{r}
+# install.packages("tidyverse")
+library(tidyverse)
+library(lubridate)
+
+data("chickwts")
+
+
+```
+# Tip 1 of 18: Create new columns in a count or group_by
+
+```{r}
+
+chickwts%>%
+  count(feed)
+
+
+```
+
